@@ -55,13 +55,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 function canWeDeliver(zipcode){
     if(deliveryAreaZipCodes.includes(zipcode)){
-        console.log("You're in our delivery zone!")
+        return "You're in our delivery zone!"
     } else {
-        console.log("Sorry, we can't deliver to that address")
+        return "Sorry, we can't deliver to that address"
     }
     
 }
-// console.log(canWeDeliver(19709))
+console.log(canWeDeliver(19709))
 
 
 /* 
@@ -82,6 +82,19 @@ function canWeDeliver(zipcode){
 */
 
 // CODE HERE
+
+function canWeDeliverTwo(zipcode){
+ for (let i = 0; i < deliveryAreaZipCodes.length; i++){
+     if(zipcode !== deliveryAreaZipCodes[i]){
+         return "Sorry, we can't deliver to that address"
+     } else {
+         return "You're in our delivery zone!"
+     }
+ }
+    
+}
+console.log(canWeDeliverTwo(85205))
+
 
 
 //////////////////PROBLEM 3////////////////////
