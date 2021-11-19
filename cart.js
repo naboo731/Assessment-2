@@ -86,6 +86,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
 
 /*
     TEXT ANSWER HERE
+    The customer object would include the basics for contacting the customer: name and phone number. But should also include address (for delivery options), and email address (for promotions). For every customer to have the same blueprint, it would be efficient to build a class so that every customer object requires/has the same keys.
 
 */
 
@@ -95,3 +96,13 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
 */
 
 //CODE HERE
+
+//ONLINE CUSTOMER OBJECT
+class Customer {
+   constructor(name, phoneNumber, address, emailAddress){
+    this.name = name,
+   this.phoneNumber = phoneNumber,
+   this.address = address,
+   this.emailAddress = emailAddress
+}
+}
