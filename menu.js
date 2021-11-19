@@ -32,6 +32,15 @@
 
 //CODE HERE
 
+const pizza = {
+    name: "Pepperoni",
+    price: 9.95,
+    category: "Entree",
+    popularity: 85,
+    rating: 4.5,
+    tags: ["family", "kids"]
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
