@@ -131,12 +131,12 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(function(tag){
-    if(foodArr.inlcudes(tag)){
-        return foodArr[0].name
+const filteredFood = foodArr.filter(function(el){
+    if(el.tags.includes("gluten free")){
+        return el.tags
     }
 })
-// console.log(filteredFood("kids"))
+// console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -180,12 +180,16 @@ const filteredFood = foodArr.filter(function(tag){
 
 //CODE HERE
 
-// function filterByProperty(property, number, type){
-//     let filteredArr = []
-//     let filterProp = foodArr.filter(property, number){
-//         // return callback()
-//     }
-// }
+function filterByProperty(property, number, type){
+    let filterProp = foodArr.filter((el)=>{
+        if (type === "above"){
+            return el[property] > number
+        } else {
+            return el[property] < number
+        }
+    })
+    return filterProp
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -195,3 +199,6 @@ const filteredFood = foodArr.filter(function(tag){
 */
 
 //CODE HERE
+
+filterByProperty("price", 10, "below")
+filterByProperty("price", 10, "above")
