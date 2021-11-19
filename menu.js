@@ -38,7 +38,7 @@ const pizza = {
     category: "Entree",
     popularity: 85,
     rating: 4.5,
-    tags: ["family", "kids"]
+    tags: ["family", "kids", "gluten-free"]
 }
 
 
@@ -53,6 +53,7 @@ const pizza = {
 
 //CODE HERE
 
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -62,6 +63,8 @@ const pizza = {
 */
 
 //CODE HERE
+
+// console.log(pizza.tags[1])
 
 
 /*
@@ -73,6 +76,10 @@ const pizza = {
 
 //CODE HERE
 
+let {price: newPrice} = pizza
+newPrice = 8.25
+// console.log(newPrice)
+
 
 /*
     Fourth, and last, destructure the category
@@ -82,6 +89,11 @@ const pizza = {
 */
 
 //CODE HERE
+
+let {category: newCategory} = pizza
+newCategory = "Family Entree"
+
+// console.log(newCategory)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -97,8 +109,13 @@ const pizza = {
 */
 
 //CODE HERE
-
-
+let foodArr = [
+    {name: "mozzarella sticks", price: 5.99, category: "appetizer", popularity: 90, rating: 4.8, tags: ["family", "kids"]},
+    {name: "texas fries", price: 5.50, category: "appetizer", popularity: 93, rating: 4.4, tags: ["family", "kids", "gluten free"]},
+    {name: "house salad", price: 3.99, category: "appetizer", popularity: 45, rating: 4.3, tags: ["family", "gluten free"]},
+   {name: "caesar salad with chicken", price: 3.99, category: "entree", popularity: 87, rating: 3.9, tags: ["family", "gluten free"]},
+    {name: "chicken parm", price: 11.99, category: "entree", popularity: 87, rating: 4.4, tags: ["family", "kids"]}
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -114,8 +131,12 @@ const pizza = {
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(function(tag){
+    if(foodArr.inlcudes(tag)){
+        return foodArr[0].name
+    }
+})
+// console.log(filteredFood("kids"))
 
 
 //////////////////PROBLEM 5////////////////////
@@ -150,7 +171,7 @@ const pizza = {
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -159,6 +180,12 @@ const pizza = {
 
 //CODE HERE
 
+// function filterByProperty(property, number, type){
+//     let filteredArr = []
+//     let filterProp = foodArr.filter(property, number){
+//         // return callback()
+//     }
+// }
 
 /*
     Invoke the `filterByProperty` function passing
