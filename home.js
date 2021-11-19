@@ -61,7 +61,7 @@ function canWeDeliver(zipcode){
     }
     
 }
-console.log(canWeDeliver(19709))
+// console.log(canWeDeliver(19709))
 
 
 /* 
@@ -93,7 +93,7 @@ function canWeDeliverTwo(zipcode){
  }
     
 }
-console.log(canWeDeliverTwo(85205))
+// console.log(canWeDeliverTwo(85205))
 
 
 
@@ -132,6 +132,8 @@ const deals = [
 
 //CODE HERE
 
+let newTitle = deals[0].title.replace('15', '10')
+// console.log(newTitle)
 
 
 /*
@@ -148,3 +150,6 @@ const deals = [
 */
 
 //CODE HERE
+let newDesc = deals[1].desc.replace("March", "April").trim()
+// console.log(newDesc)
+
